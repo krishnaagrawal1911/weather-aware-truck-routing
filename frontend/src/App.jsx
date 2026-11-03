@@ -19,11 +19,13 @@ export default function App() {
   const [activeMetric, setActiveMetric] = useState('risk');
   const [showHeatmap, setShowHeatmap] = useState(true);
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+
   const handleCalculateRoute = async (formData) => {
     setIsLoading(true);
     setError(null);
     try {
-      const response = await fetch('/api/routes/plan/', {
+      const response = await fetch(`${API_BASE}/api/routes/plan/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
