@@ -1,7 +1,7 @@
 import math
 import requests
 from datetime import datetime, timedelta
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 
 EARTH_RADIUS_MILES = 3958.8
 METERS_TO_MILES = 0.000621371
